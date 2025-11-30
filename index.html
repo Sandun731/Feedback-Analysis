@@ -22,21 +22,21 @@
     attribution: '© OpenStreetMap'
   }).addTo(map);
 
-  // NBRO District Office Data
+  // NBRO District Office Data (Ratnapura coordinates corrected)
   var offices = [
     {district: "Kalutara", lat: 6.59284, lon: 79.95583, contact: "034-2228651", officer: "Mr. Nirosh Dhanushka"},
     {district: "Matara", lat: 5.95155, lon: 80.54782, contact: "041-2222710", officer: "Mr. Champika Manikpura"},
     {district: "Galle", lat: 6.03874, lon: 80.22121, contact: "091-2245578", officer: "Mr. E.R. Banduls"},
     {district: "Kegalle", lat: 7.25191, lon: 80.34627, contact: "035-2230780", officer: "Ms. Nimali Weerasinghe"},
     {district: "Kurunegala", lat: 7.47792, lon: 80.35013, contact: "037-2229485", officer: "Ms. Dilhani Jayalath"},
-    {district: "Rathnapura", lat: 6.71382, lon: 88.38064, contact: "045-2222805", officer: "Mr. Abitha Wanasundara"},
+    {district: "Ratnapura", lat: 6.705, lon: 80.399, contact: "045-2222805", officer: "Mr. Abitha Wanasundara"},
     {district: "Badulla", lat: 6.99637, lon: 81.05515, contact: "055-2229766", officer: "Mr. Harshani Perera"},
     {district: "Nuwara Eliya", lat: 6.96821, lon: 80.77155, contact: "052-2235066", officer: "Mr. Buddhika"},
     {district: "Kandy", lat: 7.27359, lon: 80.58292, contact: "081-2575063", officer: "Ms. Chathuri Subasinghe"},
     {district: "Matale", lat: 7.46351, lon: 80.61540, contact: "066-2226667", officer: "Mr. Chaminda Moremada"}
   ];
 
-  // Add markers
+  // Add markers with popups
   offices.forEach(function(o) {
     L.marker([o.lat, o.lon]).addTo(map)
       .bindPopup(`<b>${o.district} District Office</b><br>Officer: ${o.officer}<br>Contact: ${o.contact}`);
